@@ -11,12 +11,12 @@ function conexion(){
 	return $db;
 
 	//PRUEBA DE CONEXION
-	//if ($db) {
-	//	echo "CONEXION EXITOSA";
-	//}
-	//else {
-	//	echo "Error en la conexion: ".pg_last_error();
-	//}
+	if ($db) {
+		echo "CONEXION EXITOSA";
+	}
+	else {
+		echo "Error en la conexion: ".pg_last_error();
+	}
 }
 
 //echo conexion();

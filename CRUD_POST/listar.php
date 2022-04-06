@@ -43,7 +43,7 @@ $con=conexion();
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    
                     <th scope="col">Carnet</th>
                     <th scope="col">nombre</th>
                     <th scope="col">apellido</th>
@@ -57,12 +57,12 @@ $con=conexion();
                 <?php
                     $sql="select * from Estudiante";
                     $obj= pg_query($con,$sql);
-                    $i= 0;
+                    
                     while($fila= pg_fetch_array($obj)){
-                        $i=++;
+                       
                         ?>
                     <tr>
-                    <td scope="col"><?=$i?></td>
+                    
                     <td scope="col"><?=$fila[1]?></td>
                     <td scope="col"><?=$fila[2]?></td>
                     <td scope="col"><?=$fila[3]?></td>

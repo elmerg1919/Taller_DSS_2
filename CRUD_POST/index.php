@@ -41,7 +41,7 @@
               <div class="col-sm-4 col-4">
                 <div class="form-group">
                   <label>N° Carnet</label>
-                  <input type="tex" name="car" maxlength="8" class="form-control">
+                  <input type="tex" name="doc" maxlength="8" class="form-control">
                 </div>
               </div>
               <div class="col-sm-4 col-4">
