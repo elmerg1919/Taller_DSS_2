@@ -17,26 +17,24 @@ $con=conexion();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
    <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="border-botton: 1px solid: 1px solid #ce4da">
-    <a class="navbar-brand" style="padding-right: 50px"><img src="img/logo.png" width="100px"> </a>
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Registrar</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="listar.php">Listar<span class="sr-only">(current)</span> </a>
-            </li>
-        </ul>
+   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal"><img src="index.png" style="width: 35px; position: absolute;"> <span style="position: relative; left: 35px;">Index</span></h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="index.php">Registrar</a>
+        <a class="p-2 text-dark" href="listar.php">Lista</a>
+        <a class="p-2 text-dark" href="#">Actualizar</a>
+      </nav>
     </div>
-    </nav>
+
+    <div class="container px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Listado PostgreSQL</h1>
+      <p class="lead">PostgreSQL + PHP</p>
+    </div>
     
     <main role="main" class="container">
     
     <div class="starter-template">
-        <h1>Listado PostgreSQL</h1>
-        <p>Listado de personal</p>
+        <h1>Listado de personal</h1>
     </div>
 
     <div class="row">
@@ -45,8 +43,8 @@ $con=conexion();
                 <tr>
                     
                     <th scope="col">Carnet</th>
-                    <th scope="col">nombre</th>
-                    <th scope="col">apellido</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
                     <th scope="col">Municipio</th>
                     <th scope="col">Departamento</th>
                     <th></th>

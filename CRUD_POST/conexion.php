@@ -4,7 +4,7 @@ function conexion(){
 	$port = "port=5432";
 	$dbname = "dbname=Alumnos";
 	$user = "user=postgres";
-	$password = "password=12345";
+	$password = "password=dss1234";
 
 	$db = pg_connect("$host $port $dbname $user $password");
 
