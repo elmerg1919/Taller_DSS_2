@@ -1,3 +1,9 @@
+<?php
+include 'conexion.php';
+
+$con=conexion();
+$id=$_GET["t"];
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -29,49 +35,61 @@
     </div>
 
     <div class="container px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Registrar</h1>
+      <h1 class="display-4">Actualizar</h1>
       <p class="lead">PostgreSQL + PHP</p>
     </div>
 
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <form autocomplete="off" action="index-post.php" method="post">
+            <?php
+            $sql="select * from estudiante where idestudiante='$id'";
+            $obj=pg_query($con,$sql);
+            $fila=pg_fetch_array($obj);
+            $doc = $fila[1];
+            $nom = $fila[2];
+            $ape = $fila[3];
+            $dir = $fila[4];
+            $cel = $fila[5];
+            ?>
+          <form autocomplete="off" action="actualizar_post.php" method="post">
             <div class="row">
               <div class="col-sm-4 col-4">
                 <div class="form-group">
                   <label>N° Carnet</label>
-                  <input type="tex" name="doc" maxlength="8" class="form-control">
+                  <input type="tex" name="doc" maxlength="8" class="form-control" value="<?=$doc?>">
+                  <input type="hidden" name="idp" value="<?=$id?>">
                 </div>
               </div>
               <div class="col-sm-4 col-4">
                 <div class="form-group">
                   <label>Nombre</label>
-                  <input type="tex" name="nom" class="form-control">
+                  <input type="tex" name="nom" class="form-control" value="<?=$nom?>">
                 </div>
               </div>
               <div class="col-sm-4 col-4">
                 <div class="form-group">
                   <label>Apellidos</label>
-                  <input type="tex" name="ape" class="form-control">
+                  <input type="tex" name="ape" class="form-control" value="<?=$ape?>">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-4 col-4">
                 <div class="form-group">
-                  <label>municipio</label>
-                  <input type="tex" name="dir" class="form-control">
+                  <label>Municipio</label>
+                  <input type="tex" name="dir" class="form-control" value="<?=$dir?>">
                 </div>
               </div>
               <div class="col-sm-4 col-4">
                 <div class="form-group">
                   <label>Departamento</label>
-                  <input type="tex" name="cel" class="form-control">
+                  <input type="tex" name="cel" class="form-control" value="<?=$cel?>">
                 </div>
               </div>
             </div>
-            <input type="submit" class="btn btn-primary float-right" value="Registrar">
+            <input type="submit" class="btn btn-primary float-right" value="Actualizar"
+            <a type="button" class="btn btn-primary float-right mr-2" href="listar.php">Volver a Listar</a>
           </form>
         </div>
       </div>

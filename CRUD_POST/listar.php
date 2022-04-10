@@ -18,7 +18,7 @@ $con=conexion();
   </head>
    <body>
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal"><img src="index.png" style="width: 35px; position: absolute;"> <span style="position: relative; left: 35px;">Index</span></h5>
+      <h5 class="my-0 mr-md-auto font-weight-normal"><img src="index.jpg" style="width: 35px; position: absolute;"> <span style="position: relative; left: 35px;">Index</span></h5>
       <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="index.php">Registrar</a>
         <a class="p-2 text-dark" href="listar.php">Lista</a>
@@ -66,8 +66,8 @@ $con=conexion();
                     <td scope="col"><?=$fila[3]?></td>
                     <td scope="col"><?=$fila[4]?></td>
                     <td scope="col"><?=$fila[5]?></td>
-                    <td><a href="">actualizar</a></td>
-                    <td><a href="eliminar.php?t=<?=$fila[0]?>">eliminar</a></td>
+                    <td><a href="actualizar.php?t=<?=$fila[0]?>">Actualizar</a></td>
+                    <td><a href="eliminar.php?t=<?=$fila[0]?>">Eliminar</a></td>
                     </tr>
                         <?php
                     }
